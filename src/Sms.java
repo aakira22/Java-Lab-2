@@ -1,6 +1,5 @@
-import java.net.PortUnreachableException;
+
 import java.time.LocalDateTime;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Sms {
@@ -10,7 +9,7 @@ public class Sms {
     protected String recipient;
     protected String sender;
     protected Integer shortCode;
-    protected String transactionId;
+    //protected String transactionId;
     protected LocalDateTime timestamp;
 
     public Sms();
@@ -19,13 +18,12 @@ public class Sms {
                String recipient,
                String sender,
                Integer shortCode,
-               String transactionId,
                LocalDateTime timestamp) {
         this.msisdn = msisdn;
         this.recipient = recipient;
         this.sender = sender;
         this.shortCode = shortCode;
-        this.transactionId = transactionId;
+        //this.transactionId = transactionId;
         this.timestamp = timestamp;
     }
 
@@ -61,13 +59,13 @@ public class Sms {
         this.shortCode = shortCode;
     }
 
-    public String getTransactionId() {
-        return transactionId;
-    }
-
-    public void setTransactionId(String transactionId) {
-        this.transactionId = transactionId;
-    }
+//    public String getTransactionId() {
+//        return transactionId;
+//    }
+//
+//    public void setTransactionId(String transactionId) {
+//        this.transactionId = transactionId;
+//    }
 
     public LocalDateTime getTimestamp() {
         return timestamp;
