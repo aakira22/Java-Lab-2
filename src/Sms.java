@@ -1,5 +1,6 @@
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.logging.Logger;
 
 public class Sms {
@@ -80,8 +81,8 @@ public class Sms {
 
 
 
-    public boolean smsChecker(){
-            return true;
+    public static void smsChecker(HashMap<> smsChecker){
+        //System.out.println("true");
     }
 
 }

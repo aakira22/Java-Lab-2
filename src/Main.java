@@ -10,14 +10,14 @@ public class Main {
     //Main Method
     public static void main(String[] args) {
 
-        inputUserSms(); //Part 03.1.1 A - SMS Checker
+        inputUserSms(); //Part 03.1.1  - SMS Checker
 
 
     }
 
-    //Part 03.1.1 A - SMS Checker
+    //Part 03.1.1  - SMS Checker
     static void inputUserSms(){
-        //db connect?
+
         System.out.print("Enter Mobile number: ");
         String inputMsisdn = scanner.next();
         System.out.print("Enter Message: ");
@@ -25,20 +25,25 @@ public class Main {
         System.out.print("Enter Shortcode: ");
         String inputShortCode = scanner.next();
 
-        retrieveInputSMS(inputMsisdn,inputDetails,inputShortCode);
+        System.out.println("Is promo valid?: ");
+        Sms.smsChecker();
 
-        Sms smscheck = new Sms();
-        boolean tag = smscheck.smsChecker();
 
-        retrieveInputSMS(String inputMsisdn, String inputDetails, String inputShortCode);
+
+//        Sms smscheck = new Sms();
+//        boolean tag = smscheck.smsChecker();
     }
 
-    //Part 03.1.1 A - SMS Checker
-    static HashMap<String, String> retrieveInputSMS(String inputMsisdn, String inputDetails, String inputShortCode) {
+    //Part 03.1.1  - SMS Checker
+    public static HashMap<String, String> retrieveInputSMS(String inputMsisdn, String inputDetails, String inputShortCode) {
         HashMap<String, String> inputMap = new HashMap<>();
         inputMap.put("msisdn", inputMsisdn);
         inputMap.put("message", inputDetails);
         inputMap.put("shortCode", inputShortCode);
+
+
+
         return inputMap;
     }
+
 }
