@@ -12,7 +12,9 @@ public class Sms {
     //protected String transactionId;
     protected LocalDateTime timestamp;
 
-    public Sms();
+    public Sms() {
+
+    }
 
     public Sms(Integer msisdn,
                String recipient,
@@ -31,7 +33,7 @@ public class Sms {
         return msisdn;
     }
 
-    public void(Integer msisdn) {
+    public void setMsisdn(Integer msisdn) {
         this.msisdn = msisdn;
     }
 
@@ -59,13 +61,14 @@ public class Sms {
         this.shortCode = shortCode;
     }
 
-//    public String getTransactionId() {
-//        return transactionId;
-//    }
-//
-//    public void setTransactionId(String transactionId) {
-//        this.transactionId = transactionId;
-//    }
+/*    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+*/
 
     public LocalDateTime getTimestamp() {
         return timestamp;
@@ -76,5 +79,9 @@ public class Sms {
     }
 
 
+
+    public boolean smsChecker(){
+            return true;
+    }
 
 }

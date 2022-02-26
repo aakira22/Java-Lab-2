@@ -7,7 +7,7 @@ public class Promo {
 
     protected String promoCode;
     protected String details;
-    protected String shortCode;
+    protected Integer shortCode;
     protected LocalDateTime startDate;
     protected LocalDateTime endDate;
 
@@ -15,7 +15,7 @@ public class Promo {
 
     public Promo(String promoCode,
                  String details,
-                 String shortCode,
+                 Integer shortCode,
                  LocalDateTime startDate,
                  LocalDateTime endDate){
         this.promoCode = promoCode;
@@ -41,11 +41,11 @@ public class Promo {
         this.details = details;
     }
 
-    public String getShortCode() {
+    public Integer getShortCode() {
         return shortCode;
     }
 
-    public void setShortCode(String shortCode) {
+    public void setShortCode(Integer shortCode) {
         this.shortCode = shortCode;
     }
 
